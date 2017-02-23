@@ -15,5 +15,15 @@ puts dwarves
 #   false
 # end
 
-if (month == 12)
-end
+# if (month == 12)
+# end
+
+# Starting with x == 1 and y == 2 write code so that x == 2 and y == 1 without using a temporary variable.
+x = 1
+y = 2
+
+y = y - x
+x = 2 * y
+
+puts x
+puts y
