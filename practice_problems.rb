@@ -27,6 +27,11 @@ def iq_test(numbers)
   end
 end
 
+# Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contains any char.
+
+def XO(str)
+  str.downcase.count('x') == str.downcase.count('o')
+end
 
 # Write a method that reverses the order of words in the following string:
 
