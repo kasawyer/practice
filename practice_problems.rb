@@ -1,5 +1,23 @@
 require 'pry'
 
+def duplicate_count(text)
+  if text != ""
+    array = text.split("")
+    counts = Hash.new(0)
+    hash = array.map!(&:downcase).each { |item| counts[item] += 1 }
+    dup_count = 0
+    counts.each do |letter, count|
+      if count > 1
+        dup_count += 1
+      end
+    end
+    return dup_count
+  else
+    return 0
+  end
+end
+
+
 # Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible, containing distinct letters, - each taken only once - coming from s1 or s2.
 def longest(a1, a2)
   (a1 + a2).chars.sort.uniq.join
