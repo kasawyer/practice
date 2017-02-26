@@ -8,7 +8,7 @@ require 'pry'
 #
 # For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 
-
+#first solution
 def disemvowel(str)
   array = str.chars
   array.each_with_index do |char, i|
@@ -19,6 +19,11 @@ def disemvowel(str)
 
   new_string = array.join
   return new_string
+end
+
+#more elegant solution
+def disemvowel(str)
+  str.delete('aeiouAEIOU')
 end
 
 # Well met with Fibonacci bigger brother, AKA Tribonacci.
