@@ -1,3 +1,20 @@
+// You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+// Examples:
+// Kata.getMiddle("test") should return "es"
+// Kata.getMiddle("testing") should return "t"
+// Kata.getMiddle("middle") should return "dd"
+// Kata.getMiddle("A") should return "A"
+
+function getMiddle(s)
+{
+  if (s.length % 2 == 1) {
+    return s[s.length/2 - 0.5];
+  } else {
+    return s[s.length/2 - 1] + s[s.length/2];
+  }
+}
+
+
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 //
 // Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
