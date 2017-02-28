@@ -1,3 +1,16 @@
+// Return the number (count) of vowels in the given string.
+
+function getCount(str) {
+  var vowelsCount = 0;
+  for (var i = 0; i <= str.length - 1; i++) {
+    if (str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" || str.charAt(i) == "o" || str.charAt(i) == "u") {
+      vowelsCount += 1;
+    }
+  }
+  return vowelsCount;
+}
+
+
 // You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 // Examples:
 // Kata.getMiddle("test") should return "es"
