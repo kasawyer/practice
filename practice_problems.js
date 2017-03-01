@@ -11,6 +11,13 @@ String.prototype.toJadenCase = function (string) {
   return words.join(' ').trim();
 };
 
+// cleaner solution
+String.prototype.toJadenCase = function () {
+  return this.split(" ").map(function(word){
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }).join(" ");
+};
+
 
 // Return the number (count) of vowels in the given string.
 
