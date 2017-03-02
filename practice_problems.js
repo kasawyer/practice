@@ -1,3 +1,16 @@
+// Given an integral number, determine if it's a square number:
+//
+// In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+// The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+
+var isSquare = function(n){
+  if(n >= 0 && Math.sqrt(n) % 1 === 0) {
+    return true;
+  }
+  return false;
+};
+
+
 // Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word.
 //
 // Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
