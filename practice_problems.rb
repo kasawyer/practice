@@ -39,11 +39,11 @@ require 'pry'
 #
 # Return ""Battle Result: Good triumphs over Evil" if good wins, "Battle Result: Evil eradicates all trace of Good" if evil wins, or "Battle Result: No victor on this battle field" if it ends in a tie.
 
-def goodVsEvil( good, evil )
-  goodWorthByIndex = [ 1, 2, 3, 3, 4, 10 ]
-  evilWorthByIndex = [ 1, 2, 2, 2, 3, 5, 10 ]
-  goodValue = getSum( good, goodWorthByIndex )
-  evilValue = getSum( evil, evilWorthByIndex )
+def goodVsEvil(good, evil)
+  goodValueByIndex = [1, 2, 3, 3, 4, 10]
+  evilValueByIndex = [1, 2, 2, 2, 3, 5, 10]
+  goodValue = getSum(good, goodValueByIndex)
+  evilValue = getSum(evil, evilValueByIndex)
   if goodValue == evilValue
     return "Battle Result: No victor on this battle field"
   end
@@ -52,11 +52,11 @@ end
 
 def getSum( group, worth )
   sum = 0
-  of = group.split( ' ' )
+  of = group.split(' ')
   for i in 0..of.length - 1
-    if of[ i ].to_i > 0
-      for j in 1..of[ i ].to_i
-        sum += worth[ i ].to_i
+    if of[i].to_i > 0
+      for j in 1..of[i].to_i
+        sum += worth[i].to_i
       end
     end
   end
