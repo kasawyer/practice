@@ -7,6 +7,7 @@
 #
 # array_diff([1,2],[1]) == [2]
 
+#first solution
 def array_diff(a, b)
   b.each do |value|
     if a.include?(value)
@@ -14,4 +15,9 @@ def array_diff(a, b)
     end
   end
   return a
+end
+
+#simpler solution
+def array_diff(a, b)
+  a - b
 end
