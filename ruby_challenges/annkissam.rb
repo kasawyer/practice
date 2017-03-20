@@ -25,13 +25,21 @@
 # Input = "abcd", should return the following list:
 # []
 
-nouns = ["abcd", "c", "def", "h", "ij", "cde"]
-verbs = ["bc", "fg", "g", "hij", "bcd"]
-articles = ["a", "ac", "e"]
+NOUNS = ["abcd", "c", "def", "h", "ij", "cde"]
+VERBS = ["bc", "fg", "g", "hij", "bcd"]
+ARTICLES = ["a", "ac", "e"]
 
-dictionary = nouns + verbs + articles
+DICTIONARY = NOUNS + VERBS + ARTICLES
 
-def sentences(string)
-  if
+def valid_sentence(string)
+  string.split(" ").each do |word|
+    if !DICTIONARY.include?(word)
+      return []
+    else
+      return [] << string
+    end
   end
 end
+
+string = "a bc"
+puts valid_sentence(string)
