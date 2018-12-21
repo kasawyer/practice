@@ -59,3 +59,37 @@
 # Explanation 2
 #
 # Harold's magazine is missing the word .
+
+#!/bin/ruby
+
+require 'json'
+require 'stringio'
+
+# Complete the checkMagazine function below.
+def checkMagazine(magazine, note)
+    magazine.sort!
+    note.sort!
+    magazine_index = 0
+    note.each_with_index do |word, i|
+        if magazine[magazine_index..magazine.count-1].include?(word)
+            magazine_index = magazine.index(word)
+            magazine.delete_at(magazine_index)
+        else
+            puts 'No'
+            return
+        end
+    end
+    puts 'Yes'
+end
+
+mn = gets.rstrip.split
+
+m = mn[0].to_i
+
+n = mn[1].to_i
+
+magazine = gets.rstrip.split(' ').map(&:to_s)
+
+note = gets.rstrip.split(' ').map(&:to_s)
+
+checkMagazine magazine, note
